@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10px;
+    color: $gray;
+}
+
+body{
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+// Typography
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+p,li{
+    font-size: 1.6rem;
+}
+p.logo-text{
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+h2.timer-minutes,h2.timer-seconds{
+    font-size: 7.5rem;
+}
+i.fa{
+    font-size: 3rem;
+}
+input{
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+    outline: 0;
+}
+button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    &.task-completed i{
+        font-size: 1.6rem;
+    }
+    i{
+        color: $gray;
+    }
+
+}
+ul{
+    width: 100%;
+    padding: 1rem;
+    list-style: none;
+    li{
+        padding: .5rem;
+        border-bottom: 1px solid $gray-o;
+    }
+}

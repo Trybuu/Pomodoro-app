@@ -1,0 +1,12 @@
+.logo{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 800px;
+    padding: 1rem;
+    background-color: $white;
+    border-radius: 0 0 1.2rem 1.2rem;
+    // box-shadow: 0 0 10px $gray;
+}
