@@ -1,20 +1,33 @@
-.header-wrapper{
+.header-wrapper {
     height: 100vh;
     width: 100vw;
     background-color: $pink;
+    @media only screen and (min-device-width: 540px) {
+        height: 100%;
+    }
 }
-header{
+
+header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 10rem 2rem 0 2rem;
 
-    .stopwatch-container{
+    @media only screen and (min-device-width: 667px) {
+        padding: 6rem 2rem 0 2rem;
+    }
+
+    @media only screen and (min-device-width: 768px) {
+        padding: 10rem 2rem 0 2rem;
+    }
+
+    .stopwatch-container {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -26,16 +39,29 @@ header{
         max-height: 700px;
         background-color: $white;
         border-radius: 50%;
-        .focus-break{
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: 1440px) and (orientation: landscape) {
+            width: 80vh;
+            height: 80vh;
+        }
+
+        @media only screen and (min-device-width: 1440px) {
+            width: 95vh;
+            height: 95vh;
+        }
+
+        .focus-break {
             padding: 1rem;
         }
-        .timer-container{
+
+        .timer-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
-        .timer-control-container{
+
+        .timer-control-container {
             position: relative;
             display: flex;
             justify-content: center;
@@ -43,70 +69,111 @@ header{
             width: 3rem;
             height: 3rem;
             overflow: hidden;
-            .start-stop{
+
+            .start-stop {
                 position: absolute;
                 top: 0; // -3rem to change icon to pause
                 left: 50%;
                 transform: translateX(-50%);
+
+                &.pause {
+                    top: -3rem;
+                }
             }
         }
+
+        .round-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 9rem;
+            width: 9rem;
+            border-radius: 50%;
+            border: 2px solid $pink;
+            background-color: $white;
+            text-align: center;
+        }
     }
-    .todo-list-container{
+
+    .todo-list-container {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        width: 100%;
+        width: 80%;
         margin: 3rem 0;
         padding: 1rem 0;
         background-color: $white;
         border-radius: 1.2rem;
-        .input-container{
+
+        @media only screen and (min-device-width: 540px) {
+            margin: 20rem 0;
+        }
+
+        .input-container {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             width: 100%;
-            input{
-                width: 80%;
+            padding: 0 1.4rem 1rem 1rem;
+
+            input {
+                width: 100%;
                 background-color: transparent;
                 border: 0;
                 border-bottom: 1px solid transparent;
                 transition: .2s ease;
-                &:focus{
+
+                &:focus {
                     border-bottom: 1px solid $pink;
                 }
             }
 
-            button{
-                width: 10%;
-                i{
+            button {
+                i {
                     transition: .2s ease;
                 }
-                &:hover i{
+
+                &:hover i {
                     color: $pink;
                 }
             }
         }
-        .tasks-container{
+
+        .tasks-container {
             height: 20vh;
             width: 100%;
             overflow-y: scroll;
-            ul{
+
+            @media(min-device-width: 728px) {
+                height: 40vh;
+            }
+
+            @media only screen and (min-device-width: 667px) {
+                height: 50vh;
+            }
+
+            ul {
                 display: flex;
                 flex-direction: column;
-                li{
+
+                li {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     width: 100%;
-                    &.completed{
+
+                    &.completed {
                         text-decoration: line-through;
                     }
                 }
             }
-            
+
         }
-        
+
     }
 }

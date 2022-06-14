@@ -1,0 +1,22 @@
+.footer-wrapper{
+    width: 100vw;
+    background-color: $darker-gray;
+    border-bottom: 2rem solid $pink;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 2rem;
+    .fa{
+        color: $pink;
+        opacity: 0.7;
+        margin: 0 1rem;
+        &.fa:hover{
+            opacity: 1;
+        }
+    }
+
+}
